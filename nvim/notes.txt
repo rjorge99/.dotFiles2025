@@ -1,0 +1,2 @@
+# vim-maximizer - Usado para maximizar splits
+{ "<leader>sm", "<cmd>MaximizerToggle<CR>", desc = "Maximize/minimize a split" },

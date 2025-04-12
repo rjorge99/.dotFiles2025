@@ -1,0 +1,8 @@
+*
+!.gitignore
+!zsh/
+!zsh/.zshrc
+!nvim/
+!nvim/**
+!tmux/
+!tmux/.tmux.conf
