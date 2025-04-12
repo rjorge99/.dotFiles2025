@@ -154,18 +154,29 @@ return {
             },
         })
 
-        -- configure emmet language server
+        -- configure docker compose server
+        lspconfig["docker_compose_language_service"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            filetypes = { "yaml", "yml" },
+        })
+
         lspconfig["emmet_ls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
             filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
         })
-
         -- configure python server
         lspconfig["pyright"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
+
+        -- configure yaml server
+        -- lspconfig["yamlls"].setup({
+        --     capabilities = capabilities,
+        --     on_attach = on_attach,
+        -- })
 
         -- configure lua server (with special settings)
         lspconfig["lua_ls"].setup({

@@ -43,6 +43,7 @@ return {
                 "dockerls",
                 "docker_compose_language_service",
                 "volar",
+                "yamlls",
             },
             -- auto-install configured servers (with lspconfig)
             automatic_installation = true, -- not the same as ensure_installed
