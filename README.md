@@ -1,0 +1,1 @@
+## Clonar dentro de ~/.config
