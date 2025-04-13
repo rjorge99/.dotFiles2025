@@ -54,7 +54,17 @@ return {
             options = {
                 theme = my_lualine_theme,
             },
+
+            tabline = {
+                lualine_a = {},
+                lualine_b = { "branch" },
+                lualine_c = { "filename" },
+                lualine_x = {},
+                lualine_y = {},
+                lualine_z = {},
+            },
             sections = {
+
                 lualine_x = {
                     {
                         lazy_status.updates,
@@ -64,6 +74,7 @@ return {
                     { "encoding" },
                     { "fileformat" },
                     { "filetype" },
+                    { "tabnine" },
                 },
             },
         })
