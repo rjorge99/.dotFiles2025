@@ -3,12 +3,12 @@ return {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     dependencies = {
-        "hrsh7th/cmp-buffer",           -- source for text in buffer
-        "hrsh7th/cmp-path",             -- source for file system paths
-        "hrsh7th/cmp-cmdline",          -- source for vim's cmdline
-        "onsails/lspkind.nvim",         -- vs-code like pictograms
-        "L3MON4D3/LuaSnip",             -- snippet engine
-        "saadparwaiz1/cmp_luasnip",     -- for autocompletion
+        "hrsh7th/cmp-buffer", -- source for text in buffer
+        "hrsh7th/cmp-path", -- source for file system paths
+        "hrsh7th/cmp-cmdline", -- source for vim's cmdline
+        "onsails/lspkind.nvim", -- vs-code like pictograms
+        "L3MON4D3/LuaSnip", -- snippet engine
+        "saadparwaiz1/cmp_luasnip", -- for autocompletion
         "rafamadriz/friendly-snippets", -- useful snippets
         "roobert/tailwindcss-colorizer-cmp.nvim",
     },
@@ -35,23 +35,24 @@ return {
                 ["<C-j>"] = cmp.mapping.scroll_docs(4),
                 ["<C-p>"] = cmp.mapping.select_prev_item(), -- previous suggestion
                 ["<C-n>"] = cmp.mapping.select_next_item(), -- next suggestion
-                ["<C-Space>"] = cmp.mapping.complete(),     -- show completion suggestions
-                ["<C-e>"] = cmp.mapping.abort(),            -- close completion window
+                ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+                ["<C-e>"] = cmp.mapping.abort(), -- close completion window
                 ["<CR>"] = cmp.mapping.confirm({ select = true }),
             }),
             -- sources for autocompletion
             sources = cmp.config.sources({
+                { name = "codecompanion" }, -- lsp
                 { name = "nvim_lsp" }, -- lsp
-                { name = "buffer" },   -- text within current buffer
-                { name = "path" },     -- file system paths
-                { name = "luasnip" },  -- snippets
+                { name = "buffer" }, -- text within current buffer
+                { name = "path" }, -- file system paths
+                { name = "luasnip" }, -- snippets
             }),
             formatting = {
                 fields = { "abbr", "kind", "menu" },
                 format = lspkind.cmp_format({
                     mode = "symbol_text", -- options: 'text', 'text_symbol', 'symbol_text', 'symbol'
-                    maxwidth = 50,        -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
-                    menu = {              -- showing type in menu
+                    maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+                    menu = { -- showing type in menu
                         nvim_lsp = "[LSP]",
                         path = "[Path]",
                         buffer = "[Buffer]",
