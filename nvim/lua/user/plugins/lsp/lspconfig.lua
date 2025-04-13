@@ -35,14 +35,15 @@ return {
                 end
 
                 local client = clients[1]
-                local params = vim.lsp.util.make_position_params(0, client.offset_encoding or "utf-16")
+                local offset_encoding = client.offset_encoding or "utf-8"
+                local params = vim.lsp.util.make_position_params(0, offset_encoding)
 
                 vim.lsp.buf_request(0, "textDocument/references", params, function(err, result, _, _)
                     if err or not result then
                         return
                     end
 
-                    local items = vim.lsp.util.locations_to_items(result, client.offset_encoding or "utf-16")
+                    local items = vim.lsp.util.locations_to_items(result, client.offset_encoding)
                     vim.fn.setqflist({}, " ", {
                         title = "LSP References",
                         items = items,
