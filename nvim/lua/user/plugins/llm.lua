@@ -16,6 +16,13 @@ return {
             -- },
             request_body = {
                 options = {
+                    --                     "temperature": 0.2,
+                    -- "topP": 0.15,
+                    -- "topK": 5,
+                    -- "presencePenalty": 0.1,
+                    -- "frequencyPenalty": 0.1,
+                    -- "stop": ["; ", "} "],
+                    -- "maxTokens": 200
                     temperature = 0.2,
                     top_p = 0.95,
                 },
