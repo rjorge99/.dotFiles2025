@@ -1,4 +1,5 @@
 return {
+    enabled = false,
     "Exafunction/windsurf.nvim",
     dependencies = {
         "nvim-lua/plenary.nvim",
@@ -44,8 +45,8 @@ return {
                     next = "<M-]>",
                     -- Cycle to the previous completion.
                     prev = "<M-[>",
-                }
-            }
+                },
+            },
         })
-    end
+    end,
 }
