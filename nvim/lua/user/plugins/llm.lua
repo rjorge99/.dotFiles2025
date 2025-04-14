@@ -5,24 +5,19 @@ return {
         local llm = require("llm")
         llm.setup({
             backend = "ollama",
-            model = "qwen2.5-coder:1.5b-base",
+            model = "deepseek-coder:1.3b-base",
             url = "http://localhost:11434", -- llm-ls uses "/api/generate"
             accept_keymap = "<S-Tab>",
             dismiss_keymap = "<Esc>",
-            -- prompts = {
-            --     completion = {
-            --         prompt = "Completa el siguiente código. Solo responde con el código sin usar markdown ni explicaciones:",
-            --     },
-            -- },
+            fim = {
+                enabled = true,
+                prefix = "<｜fim▁begin｜>",
+                suffix = "<｜fim▁hole｜>",
+                middle = "<｜fim▁end｜>",
+            },
             request_body = {
+                -- Modelfile options for the model you use
                 options = {
-                    --                     "temperature": 0.2,
-                    -- "topP": 0.15,
-                    -- "topK": 5,
-                    -- "presencePenalty": 0.1,
-                    -- "frequencyPenalty": 0.1,
-                    -- "stop": ["; ", "} "],
-                    -- "maxTokens": 200
                     temperature = 0.2,
                     top_p = 0.95,
                 },
