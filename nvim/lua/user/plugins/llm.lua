@@ -1,4 +1,5 @@
 return {
+    lazy = true,
     "huggingface/llm.nvim",
     opts = {},
     config = function()

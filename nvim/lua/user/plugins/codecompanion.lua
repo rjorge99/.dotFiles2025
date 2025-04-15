@@ -1,5 +1,5 @@
 return {
-    enabled = false,
+    lazy = true,
     "olimorris/codecompanion.nvim",
     opts = {},
     dependencies = {
