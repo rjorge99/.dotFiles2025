@@ -44,6 +44,17 @@ setopt hist_ignore_dups
 setopt hist_verify
 
 
+export EDITOR=nvim
+# Provides the ability to change the current working directory when exiting Yazi.
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 # Reemplaza Tab por aceptar la sugerencia
 # bindkey '^I' autosuggest-accept
 
@@ -51,7 +62,3 @@ setopt hist_verify
 # bindkey '^[[A' history-search-backward
 # bindkey '^[[B' history-search-forward
 
-
-
-
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh                      # fzf
