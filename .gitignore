@@ -6,3 +6,6 @@
 !nvim/**
 !tmux/
 !tmux/.tmux.conf
+!yazi/
+!yazi/**
+
