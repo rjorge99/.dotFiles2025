@@ -12,6 +12,7 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(starship init zsh)" 
 eval "$(zoxide init zsh)" 
 
+bindkey -s ^f "tmux-sessionizer.sh\n"
 
 # alias
 alias bat="batcat"
