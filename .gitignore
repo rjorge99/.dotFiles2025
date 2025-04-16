@@ -4,6 +4,8 @@
 !zsh/.zshrc
 !nvim/
 !nvim/**
+!starship/
+!starship/starship.toml
 !tmux/
 !tmux/.tmux.conf
 !tmux/tmux-sessionizer.sh
