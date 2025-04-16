@@ -10,9 +10,9 @@ return {
     {
         "Mofiqul/vscode.nvim",
         priority = 1000,
-        -- lazy = true,
+        lazy = true,
         config = function()
-            vim.cmd([[colorscheme vscode]])
+            -- vim.cmd([[colorscheme vscode]])
         end,
     },
     {
@@ -42,9 +42,9 @@ return {
     {
         "catppuccin/nvim",
         priority = 1000,
-        lazy = true,
+        -- lazy = true,
         config = function()
-            -- vim.cmd([[colorscheme catppuccin-mocha]])
+            vim.cmd([[colorscheme catppuccin-mocha]])
         end,
     },
     {
