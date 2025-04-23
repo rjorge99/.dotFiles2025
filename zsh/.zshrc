@@ -34,6 +34,8 @@ alias ga="git add"
 alias gcmsg="git commit -m"
 alias gca="git commit --amend"
 
+alias gk="gitkraken --disable-gpu"
+
 
 # history setup
 HISTFILE=$HOME/.zhistory
