@@ -20,3 +20,5 @@ require("lazy").setup({ { import = "user.plugins" }, { import = "user.plugins.ls
         notify = false,
     },
 })
+
+require("user.core.transparency").setup()
