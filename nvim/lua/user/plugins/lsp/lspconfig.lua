@@ -163,19 +163,19 @@ return {
         lspconfig["lua_ls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
-            settings = {
-                Lua = {
-                    telemetry = { enable = false },
-                    diagnostics = { globals = { "vim" } },
-                    workspace = {
-                        checkThirdParty = false,
-                        library = {
-                            [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                            [vim.fn.stdpath("config") .. "/lua"] = true,
-                        },
-                    },
-                },
-            },
+            -- settings = {
+            --     Lua = {
+            --         telemetry = { enable = false },
+            --         diagnostics = { globals = { "vim" } },
+            --         workspace = {
+            --             checkThirdParty = false,
+            --             library = {
+            --                 [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+            --                 [vim.fn.stdpath("config") .. "/lua"] = true,
+            --             },
+            --         },
+            --     },
+            -- },
         })
 
         lspconfig["rust_analyzer"].setup({

@@ -9,6 +9,11 @@ return {
     config = function()
         local noice = require("noice")
 
+        -- Requerido por el detalle de transparencia
+        require("notify").setup({
+            background_colour = "#1e1e2e",
+        })
+
         noice.setup({
             routes = {
                 {

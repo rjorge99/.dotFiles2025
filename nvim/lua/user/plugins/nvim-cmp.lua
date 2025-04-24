@@ -22,6 +22,9 @@ return {
         --require("luasnip/loaders/from_vscode").lazy_load({ paths = { "./snippets" } })
 
         cmp.setup({
+            performance = {
+                max_view_entries = 10,
+            },
             completion = {
                 completeopt = "menu,menuone,preview,noselect",
             },
