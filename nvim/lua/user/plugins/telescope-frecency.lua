@@ -13,11 +13,11 @@ return {
                     --
                     -- This fixes an issue I had in which I couldn't close the floating
                     -- window because I couldn't focus it
-                    db_safe_mode = false, -- Default: true
+                    -- db_safe_mode = false, -- Default: true
                     -- If `true`, it removes stale entries count over than db_validate_threshold
-                    auto_validate = true, -- Default: true
+                    -- auto_validate = true, -- Default: true
                     -- It will remove entries when stale ones exist more than this count
-                    db_validate_threshold = 10, -- Default: 10
+                    -- db_validate_threshold = 10, -- Default: 10
                     -- Show the path of the active filter before file paths.
                     -- So if I'm in the `dotfiles-latest` directory it will show me that
                     -- before the name of the file
@@ -28,8 +28,6 @@ return {
         require("telescope").load_extension("frecency")
 
         local opts = { noremap = true, silent = true, desc = "[F]ind [F]recency" }
-        vim.keymap.set("n", "<Leader>ff", function()
-            require("telescope").extensions.frecency.frecency({})
-        end, opts)
+        vim.keymap.set("n", "<Leader>ff", ":Telescope frecency workspace=CWD<CR>", opts)
     end,
 }
