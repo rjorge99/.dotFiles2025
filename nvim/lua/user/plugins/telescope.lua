@@ -24,6 +24,9 @@ return {
 
         telescope.setup({
             defaults = {
+                layout_config = {
+                    preview_width = 0.5,
+                },
                 path_display = { "truncate " },
                 file_ignore_patterns = {
                     "node_modules",
