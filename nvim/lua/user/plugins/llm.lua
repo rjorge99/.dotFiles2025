@@ -1,6 +1,6 @@
 return {
-    lazy = true,
     "huggingface/llm.nvim",
+    enabled = false,
     opts = {},
     config = function()
         local llm = require("llm")
