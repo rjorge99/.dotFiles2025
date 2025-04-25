@@ -10,6 +10,7 @@ return {
         local noice = require("noice")
 
         -- Requerido por el detalle de transparencia
+        vim.lsp.set_log_level("error")
         require("notify").setup({
             background_colour = "#1e1e2e",
         })
@@ -58,7 +59,7 @@ return {
             },
             messages = {
                 enabled = false,
-                view_warn = "cmdline",
+                -- view_warn = "cmdline",
             },
         })
     end,

@@ -102,6 +102,11 @@ return {
             filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact" },
         })
 
+        lspconfig["csharp_ls"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
         lspconfig["cssls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,

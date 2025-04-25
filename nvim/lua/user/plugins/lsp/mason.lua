@@ -40,6 +40,7 @@ return {
                 "docker_compose_language_service",
                 "volar",
                 "yamlls",
+                "csharp_ls",
             },
             automatic_installation = true,
         })
@@ -50,6 +51,7 @@ return {
                 "stylua",
                 "eslint_d",
                 "shfmt",
+                "csharpier",
             },
         })
     end,

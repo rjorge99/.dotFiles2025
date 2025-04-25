@@ -37,6 +37,7 @@ return {
                 "vimdoc",
                 "tsx",
                 "vue",
+                "c_sharp",
             },
             highlight = { enable = true },
             indent = { enable = true },
