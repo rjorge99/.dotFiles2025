@@ -1,5 +1,5 @@
 return {
-    enabled = false,
+    -- enabled = false,
     "Exafunction/windsurf.nvim",
     dependencies = {
         "nvim-lua/plenary.nvim",
@@ -10,7 +10,7 @@ return {
             -- Optionally disable cmp source if using virtual text only
             enable_cmp_source = false,
             virtual_text = {
-                enabled = false,
+                enabled = true,
 
                 -- These are the defaults
 
