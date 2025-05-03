@@ -11,7 +11,6 @@ M.setup = function()
   highlight NonText guibg=none
   highlight Folded guibg=none
   highlight FoldColumn guibg=none
-
   
   highlight TreeSitterContext guibg=none
   highlight TreeSitterContextLineNumber guibg=none
@@ -19,6 +18,11 @@ M.setup = function()
   highlight NvimTreeNormal guibg=none
   highlight NvimTreeNormalNC guibg=none
   highlight NvimTreeEndOfBuffer guibg=none
+
+  highlight WinBar guibg=none
+  highlight WinBarNC guibg=none
+  highlight NavicText guibg=none
+  highlight NavicSeparator guibg=none
 ]])
 end
 
