@@ -9,6 +9,9 @@ M.setup = function()
   highlight StatusLine guibg=none
   highlight LineNr guibg=none
   highlight NonText guibg=none
+  highlight Folded guibg=none
+  highlight FoldColumn guibg=none
+
   
   highlight TreeSitterContext guibg=none
   highlight TreeSitterContextLineNumber guibg=none
