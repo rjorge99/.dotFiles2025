@@ -37,6 +37,9 @@ alias gca="git commit --amend"
 alias gk="gitkraken --disable-gpu"
 
 
+alias em="/mnt/c/Users/rjorg/AppData/Local/Android/Sdk/emulator/emulator"
+
+
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -59,6 +62,11 @@ function y() {
 }
 
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export ANDROID_HOME="$HOME/android_sdk"
+export PATH=$PATH:$HOME/android_sdk/cmdline-tools/latest/bin
+export PATH=$PATH:/mnt/c/Users/rjorg/AppData/Local/Android/Sdk/platform-tools
+# export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
+# export ADB_SERVER_SOCKET=tcp:$WSL_HOST:5037
 # Reemplaza Tab por aceptar la sugerencia
 # bindkey '^I' autosuggest-accept
 
