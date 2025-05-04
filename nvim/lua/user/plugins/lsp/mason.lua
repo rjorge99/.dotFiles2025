@@ -40,7 +40,7 @@ return {
                 "docker_compose_language_service",
                 "volar",
                 "yamlls",
-                "csharp_ls",
+                -- "csharp_ls",
             },
             automatic_installation = true,
         })

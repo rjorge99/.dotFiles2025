@@ -61,6 +61,7 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+export PATH="$PATH:/usr/bin/dotnet"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export ANDROID_HOME="$HOME/android_sdk"
 export PATH=$PATH:$HOME/android_sdk/cmdline-tools/latest/bin
