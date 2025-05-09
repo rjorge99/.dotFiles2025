@@ -18,9 +18,9 @@ return {
     {
         "rjorge99/halcyon-neovim",
         priority = 1000,
-        lazy = true,
+        -- lazy = true,
         config = function()
-            --vim.cmd([[colorscheme halcyon]])
+            vim.cmd([[colorscheme halcyon]])
         end,
     },
     {
@@ -42,9 +42,9 @@ return {
     {
         "catppuccin/nvim",
         priority = 1000,
-        -- lazy = true,
+        lazy = true,
         config = function()
-            vim.cmd([[colorscheme catppuccin-mocha]])
+            -- vim.cmd([[colorscheme catppuccin-mocha]])
         end,
     },
     {

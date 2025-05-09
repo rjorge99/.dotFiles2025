@@ -5,9 +5,12 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias tmux="tmux -f ~/.config/tmux/.tmux.conf"  # Define la configuración de tmux
 
 # nvm (Node Version Manager)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                    # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                    # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.local/share/fnm:$PATH"
+eval "$(fnm env)"
 
 eval "$(starship init zsh)" 
 eval "$(zoxide init zsh)" 
@@ -61,6 +64,7 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+export PATH="$PATH:/usr/bin/dotnet"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export ANDROID_HOME="$HOME/android_sdk"
 export REACT_NATIVE_PACKAGER_HOSTNAME=192.168.0.12
