@@ -9,7 +9,7 @@ return {
             model = "deepseek-coder:1.3b-base",
             url = "http://localhost:11434", -- llm-ls uses "/api/generate"
             accept_keymap = "<S-Tab>",
-            dismiss_keymap = "<Esc>",
+            -- dismiss_keymap = "<Esc>",
             fim = {
                 enabled = true,
                 prefix = "<｜fim▁begin｜>",
