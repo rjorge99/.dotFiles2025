@@ -63,6 +63,8 @@ function y() {
 
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export ANDROID_HOME="$HOME/android_sdk"
+export REACT_NATIVE_PACKAGER_HOSTNAME=192.168.0.12
+
 export PATH=$PATH:$HOME/android_sdk/cmdline-tools/latest/bin
 export PATH=$PATH:/mnt/c/Users/rjorg/AppData/Local/Android/Sdk/platform-tools
 # export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
