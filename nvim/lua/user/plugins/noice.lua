@@ -47,6 +47,10 @@ return {
                 },
             },
             lsp = {
+                signature = {
+                    enabled = true,
+                    auto_open = true,
+                },
                 override = {
                     ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
                     ["vim.lsp.util.stylize_markdown"] = true,
@@ -56,11 +60,41 @@ return {
             presets = {
                 bottom_search = true,
                 command_palette = true,
+                lsp_doc_border = true,
             },
             messages = {
                 enabled = false,
                 -- view_warn = "cmdline",
             },
+            views = {
+                hover = {
+                    position = {
+                        row = 0,
+                        col = 0,
+                    },
+                    size = {
+                        max_height = 10, -- <= documentaciones largas no cubrirán tanto
+                        max_width = 80,
+                    },
+                    border = {
+                        style = "rounded",
+                    },
+                },
+            },
         })
+
+        vim.keymap.set({ "n", "i", "s" }, "<C-f>", function()
+            if require("noice.lsp").scroll(4) then
+                return
+            end
+            return "<C-f>"
+        end, { silent = true, expr = true, desc = "Scroll forward in noice " })
+
+        vim.keymap.set({ "n", "i", "s" }, "<C-b>", function()
+            if require("noice.lsp").scroll(-4) then
+                return
+            end
+            return "<C-b>"
+        end, { silent = true, expr = true, desc = "Scroll backward in noice " })
     end,
 }
