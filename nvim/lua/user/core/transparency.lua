@@ -23,6 +23,11 @@ M.setup = function()
   highlight WinBarNC guibg=none
   highlight NavicText guibg=none
   highlight NavicSeparator guibg=none
+
+  highlight NormalFloat guibg=none
+  highlight FloatBorder guibg=none
+
+
 ]])
 end
 
