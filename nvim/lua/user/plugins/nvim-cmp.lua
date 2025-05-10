@@ -44,7 +44,7 @@ return {
             }),
             -- sources for autocompletion
             sources = cmp.config.sources({
-                { name = "codecompanion" }, -- lsp
+                -- { name = "codecompanion" }, -- lsp
                 { name = "nvim_lsp" }, -- lsp
                 { name = "buffer" }, -- text within current buffer
                 { name = "path" }, -- file system paths
