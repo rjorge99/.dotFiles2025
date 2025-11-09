@@ -38,7 +38,7 @@ return {
                 "ansiblels",
                 "dockerls",
                 "docker_compose_language_service",
-                "volar",
+                -- "volar",
                 "yamlls",
                 -- "csharp_ls",
             },
@@ -51,7 +51,7 @@ return {
                 "stylua",
                 "eslint_d",
                 "shfmt",
-                "csharpier",
+                -- "csharpier",
             },
         })
     end,

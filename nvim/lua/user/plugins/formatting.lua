@@ -22,7 +22,7 @@ return {
                 lua = { "stylua" },
                 -- python = { "isort", "black" },
                 vue = { "prettier" },
-                csharp = { "csharpier" },
+                -- csharp = { "csharpier" },
             },
             format_on_save = {
                 lsp_fallback = true,
