@@ -20,7 +20,6 @@ bindkey -s ^f "tmux-sessionizer.sh\n"
 # alias
 alias bat="batcat"
 alias v="nvim"
-alias cd="z"
 
 # eza
 alias el="eza -l --header --icons --group-directories-first"   
