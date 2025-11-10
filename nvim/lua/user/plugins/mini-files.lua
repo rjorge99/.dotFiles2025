@@ -1,5 +1,6 @@
 return {
     "echasnovski/mini.files",
+    enabled = false,
     config = function()
         require("mini.files").setup({
             mappings = {
@@ -8,8 +9,8 @@ return {
             },
         })
 
-        vim.keymap.set("n", "<leader>e", function()
-            MiniFiles.open()
-        end, { noremap = true, desc = "Show MiniFiles" })
+        -- vim.keymap.set("n", "<leader>e", function()
+        --     MiniFiles.open()
+        -- end, { noremap = true, desc = "Show MiniFiles" })
     end,
 }
