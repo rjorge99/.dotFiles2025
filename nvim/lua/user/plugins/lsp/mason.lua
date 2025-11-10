@@ -1,27 +1,9 @@
 return {
-    "williamboman/mason.nvim",
-    dependencies = {
-        "williamboman/mason-lspconfig.nvim",
-        "WhoIsSethDaniel/mason-tool-installer.nvim",
-    },
-    config = function()
-        local mason = require("mason")
-
-        local mason_lspconfig = require("mason-lspconfig")
-        local mason_tool_installer = require("mason-tool-installer")
-
-        mason.setup({
-            ui = {
-                icons = {
-                    package_installed = "✓",
-                    package_pending = "➜",
-                    package_uninstalled = "✗",
-                },
-            },
-        })
-
-        mason_lspconfig.setup({
-            ensure_installed = {
+  {
+    "williamboman/mason-lspconfig.nvim",
+    opts = {
+      -- list of servers for mason to install
+      ensure_installed = {
                 "ts_ls",
                 "html",
                 "cssls",
@@ -38,21 +20,41 @@ return {
                 "ansiblels",
                 "dockerls",
                 "docker_compose_language_service",
+                "vue_ls",
                 -- "volar",
                 "yamlls",
                 -- "csharp_ls",
+      },
+    },
+    dependencies = {
+      {
+        "williamboman/mason.nvim",
+        opts = {
+          ui = {
+            icons = {
+              package_installed = "✓",
+              package_pending = "➜",
+              package_uninstalled = "✗",
             },
-            automatic_installation = true,
-        })
-
-        mason_tool_installer.setup({
-            ensure_installed = {
+          },
+        },
+      },
+      "neovim/nvim-lspconfig",
+    },
+  },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    opts = {
+      ensure_installed = {
                 "prettier",
                 "stylua",
                 "eslint_d",
                 "shfmt",
                 -- "csharpier",
-            },
-        })
-    end,
+      },
+    },
+    dependencies = {
+      "williamboman/mason.nvim",
+    },
+  },
 }
