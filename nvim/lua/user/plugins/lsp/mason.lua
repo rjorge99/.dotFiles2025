@@ -1,9 +1,9 @@
 return {
-  {
-    "williamboman/mason-lspconfig.nvim",
-    opts = {
-      -- list of servers for mason to install
-      ensure_installed = {
+    {
+        "williamboman/mason-lspconfig.nvim",
+        opts = {
+            -- list of servers for mason to install
+            ensure_installed = {
                 "ts_ls",
                 "html",
                 "cssls",
@@ -24,37 +24,38 @@ return {
                 -- "volar",
                 "yamlls",
                 -- "csharp_ls",
-      },
-    },
-    dependencies = {
-      {
-        "williamboman/mason.nvim",
-        opts = {
-          ui = {
-            icons = {
-              package_installed = "✓",
-              package_pending = "➜",
-              package_uninstalled = "✗",
             },
-          },
         },
-      },
-      "neovim/nvim-lspconfig",
+        dependencies = {
+            {
+                "williamboman/mason.nvim",
+                opts = {
+                    ui = {
+                        icons = {
+                            package_installed = "✓",
+                            package_pending = "➜",
+                            package_uninstalled = "✗",
+                        },
+                    },
+                },
+            },
+            "neovim/nvim-lspconfig",
+        },
     },
-  },
-  {
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
-    opts = {
-      ensure_installed = {
+    {
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
+        opts = {
+            ensure_installed = {
                 "prettier",
                 "stylua",
-                "eslint_d",
+                -- "eslint_d",  instalar manual:   MasonInstall eslint_d@13.1.2
                 "shfmt",
                 -- "csharpier",
-      },
+            },
+        },
+        dependencies = {
+            "williamboman/mason.nvim",
+        },
     },
-    dependencies = {
-      "williamboman/mason.nvim",
-    },
-  },
 }
+
