@@ -52,6 +52,7 @@ return {
         priority = 1000,
         config = function()
             vim.cmd.colorscheme("ayu")
+            vim.api.nvim_set_hl(0, "Visual", { bg = "#3e4452", fg = "NONE" })
         end,
     },
     {
