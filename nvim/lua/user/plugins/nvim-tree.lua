@@ -30,7 +30,7 @@ return {
         nvimtree.setup({
             on_attach = my_on_attach,
             view = {
-                width = 35,
+                width = 50,
                 relativenumber = true,
             },
             renderer = {
@@ -49,13 +49,13 @@ return {
                             symlink = "󰉒 ",
                             symlink_open = "󰉒 ",
                         },
-                        git = {
-                            deleted = " ",
-                            unstaged = "",
-                            untracked = "",
-                            staged = "",
-                            unmerged = "",
-                        },
+                        -- git = {
+                        -- deleted = " ",
+                        -- unstaged = "",
+                        -- untracked = "",
+                        -- staged = "",
+                        -- unmerged = "",
+                        -- },
                     },
                 },
             },
