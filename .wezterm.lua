@@ -8,12 +8,7 @@ end
 -- For Windows
 --config.default_prog = { 'pwsh.exe', '-NoLogo' }
 --config.default_domain = 'WSL:Ubuntu'
-
-config.font = wezterm.font_with_fallback({ -- fonts
-	"MesloLGS Nerd Font Mono",
-	"Hack FC Ligatured",
-	"UbuntuMono Nerd Font Mono",
-})
+config.font = wezterm.font('Iosevka Nerd Font Mono')
 
 config.enable_tab_bar = false -- enable/disable tabs
 config.font_size = 17 -- font size
