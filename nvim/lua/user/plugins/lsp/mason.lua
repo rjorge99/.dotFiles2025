@@ -22,7 +22,7 @@ return {
                 "docker_compose_language_service",
                 "vue_ls",
                 "yamlls",
-                "eslint",
+                -- "eslint",
             },
         },
         dependencies = {
