@@ -21,9 +21,8 @@ return {
                 "dockerls",
                 "docker_compose_language_service",
                 "vue_ls",
-                -- "volar",
                 "yamlls",
-                -- "csharp_ls",
+                "eslint",
             },
         },
         dependencies = {
@@ -49,8 +48,7 @@ return {
                 "prettier",
                 "stylua",
                 -- "eslint_d",  instalar manual:   MasonInstall eslint_d@13.1.2
-                "shfmt",
-                -- "csharpier",
+                "shfmt", -- format bash scripts
             },
         },
         dependencies = {
@@ -58,4 +56,3 @@ return {
         },
     },
 }
-
