@@ -10,6 +10,6 @@ return {
         opts.desc = "IconPickerYank"
         vim.keymap.set("n", "<Leader><Leader>y", "<cmd>IconPickerYank<cr>", opts) --> Yank the selected icon into register
         opts.desc = "IconPickerInsert"
-        vim.keymap.set("i", "<C-i>", "<cmd>IconPickerInsert<cr>", opts)
+        vim.keymap.set("i", "<C-p>", "<cmd>IconPickerInsert<cr>", opts)
     end,
 }
