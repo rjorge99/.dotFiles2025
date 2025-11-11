@@ -3,6 +3,7 @@ return {
         "bluz71/vim-nightfly-guicolors",
         prority = 1000,
         lazy = true,
+        enabled = false,
         config = function()
             --vim.cmd([[colorscheme nightfly]])
         end,
@@ -10,6 +11,7 @@ return {
     {
         "Mofiqul/vscode.nvim",
         priority = 1000,
+        enabled = false,
         lazy = true,
         config = function()
             -- vim.cmd([[colorscheme vscode]])
@@ -18,6 +20,7 @@ return {
     {
         "rjorge99/halcyon-neovim",
         priority = 1000,
+        enabled = false,
         lazy = true,
         config = function()
             -- vim.cmd([[colorscheme halcyon]])
@@ -26,6 +29,7 @@ return {
     {
         "folke/tokyonight.nvim",
         priority = 1000,
+        enabled = false,
         lazy = true,
         config = function()
             --    vim.cmd([[colorscheme tokyonight]])
@@ -34,6 +38,7 @@ return {
     {
         "rose-pine/neovim",
         priority = 1000,
+        enabled = false,
         lazy = true,
         config = function()
             -- vim.cmd([[colorscheme rose-pine-main]])
@@ -42,6 +47,7 @@ return {
     {
         "catppuccin/nvim",
         priority = 1000,
+        enabled = false,
         lazy = true,
         config = function()
             -- vim.cmd([[colorscheme catppuccin-mocha]])
@@ -51,12 +57,13 @@ return {
         "Shatur/neovim-ayu",
         priority = 1000,
         config = function()
-            vim.cmd.colorscheme("ayu")
+            vim.cmd.colorscheme("ayu-dark")
             vim.api.nvim_set_hl(0, "Visual", { bg = "#3e4452", fg = "NONE" })
         end,
     },
     {
         "samharju/synthweave.nvim",
+        enabled = false,
         lazy = true,
         priority = 1000,
         config = function()
