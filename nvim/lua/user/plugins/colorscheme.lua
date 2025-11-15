@@ -2,8 +2,8 @@ return {
     {
         "bluz71/vim-nightfly-guicolors",
         prority = 1000,
-        lazy = true,
-        enabled = false,
+        -- lazy = true,
+        -- enabled = false,
         config = function()
             --vim.cmd([[colorscheme nightfly]])
         end,
@@ -11,8 +11,8 @@ return {
     {
         "Mofiqul/vscode.nvim",
         priority = 1000,
-        enabled = false,
-        lazy = true,
+        -- enabled = false,
+        -- lazy = true,
         config = function()
             -- vim.cmd([[colorscheme vscode]])
         end,
@@ -20,8 +20,8 @@ return {
     {
         "rjorge99/halcyon-neovim",
         priority = 1000,
-        enabled = false,
-        lazy = true,
+        -- enabled = false,
+        -- lazy = true,
         config = function()
             -- vim.cmd([[colorscheme halcyon]])
         end,
@@ -29,17 +29,17 @@ return {
     {
         "folke/tokyonight.nvim",
         priority = 1000,
-        enabled = false,
-        lazy = true,
+        -- enabled = true,
+        -- lazy = true,
         config = function()
-            --    vim.cmd([[colorscheme tokyonight]])
+            vim.cmd([[colorscheme tokyonight-night]])
         end,
     },
     {
         "rose-pine/neovim",
         priority = 1000,
-        enabled = false,
-        lazy = true,
+        -- enabled = false,
+        -- lazy = true,
         config = function()
             -- vim.cmd([[colorscheme rose-pine-main]])
         end,
@@ -47,8 +47,8 @@ return {
     {
         "catppuccin/nvim",
         priority = 1000,
-        enabled = false,
-        lazy = true,
+        -- enabled = false,
+        -- lazy = true,
         config = function()
             -- vim.cmd([[colorscheme catppuccin-mocha]])
         end,
@@ -57,8 +57,8 @@ return {
         "Shatur/neovim-ayu",
         priority = 1000,
         config = function()
-            vim.cmd.colorscheme("ayu-dark")
-            vim.api.nvim_set_hl(0, "Visual", { bg = "#3e4452", fg = "NONE" })
+            -- vim.cmd.colorscheme("ayu-dark")
+            -- vim.api.nvim_set_hl(0, "Visual", { bg = "#3e4452", fg = "NONE" })
         end,
     },
     {
